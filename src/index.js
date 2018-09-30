@@ -23,7 +23,7 @@ module.exports = function check(str, bracketsConfig) {
           return false;
         }
     }
-    if (closingBrackets.indexOf(bracket) !== -1 && notequalbreckets){
+    else if (closingBrackets.indexOf(bracket) !== -1 && notequalbreckets){
       matchingOpeningBracket=openingBrackets[closingBrackets.indexOf(bracket)];
       if (stack.length == 0 || (stack.pop() !== matchingOpeningBracket)){
         return false;
